@@ -1,8 +1,8 @@
 import React from "react";
-import { Game } from "../services/game-service";
 import { Card, CardBody, Heading, HStack, Image, Text } from "@chakra-ui/react";
 import PlatformIconList from "./PlatformIconList";
 import CriticSocre from "./CriticSocre";
+import { Game } from "../hooks/useGames";
 
 interface Props {
   game: Game;
