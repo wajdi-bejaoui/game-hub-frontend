@@ -12,7 +12,7 @@ const GameGrid = () => {
     <SimpleGrid
       columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
       padding="10px"
-      spacing={10}
+      spacing={3}
       className="list-group"
     >
       {/* {games.length === 0 && <p>There are no games</p>} */}
