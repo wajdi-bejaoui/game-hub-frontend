@@ -17,12 +17,13 @@ export interface Game {
 }
 
 
-const useGames = (selectedGenre : Genre | null, selectedPlatform : Platform | null) => 
+const useGames = (selectedGenre : Genre | null, selectedPlatform : Platform | null, searchText : string) => 
   useData<Game>("/games", {
     params : {
       genre : selectedGenre?.slug, 
-      platform : selectedPlatform?.slug
+      platform : selectedPlatform?.slug,
+      searchText : searchText
     }}, 
-    [selectedGenre?._id, selectedPlatform?.id])
+    [selectedGenre?._id, selectedPlatform?.id, searchText])
 
 export default useGames;

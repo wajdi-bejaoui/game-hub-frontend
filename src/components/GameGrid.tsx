@@ -10,10 +10,15 @@ import { Platform } from "../hooks/usePlatform";
 interface Props {
   selectedGenre: Genre | null;
   selectedPlatform: Platform | null;
+  searchText: string;
 }
 
-const GameGrid = ({ selectedGenre, selectedPlatform }: Props) => {
-  const { data, error, isLoading } = useGames(selectedGenre, selectedPlatform);
+const GameGrid = ({ selectedGenre, selectedPlatform, searchText }: Props) => {
+  const { data, error, isLoading } = useGames(
+    selectedGenre,
+    selectedPlatform,
+    searchText
+  );
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   return (
     <SimpleGrid
