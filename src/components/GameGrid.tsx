@@ -24,7 +24,7 @@ const GameGrid = ({ selectedGenre, selectedPlatform, searchText }: Props) => {
     <SimpleGrid
       columns={{ sm: 1, md: 2, lg: 3, xl: 4 }}
       padding="10px"
-      spacing={3}
+      spacing={6}
       className="list-group"
     >
       {/* {games.length === 0 && <p>There are no games</p>} */}
