@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import apiClient, { CanceledError } from "../services/api-client";
 import useData from "./useData";
+import { Genre } from "./useGenres";
 
 
 export interface Platform {
@@ -19,6 +20,6 @@ export interface Game {
 }
 
 
-const useGames = () => useData<Game>("/games")
+const useGames = (selectedGenre : Genre | null) => useData<Game>("/games", {params : {genre : selectedGenre?.slug}}, [selectedGenre?._id])
 
 export default useGames;

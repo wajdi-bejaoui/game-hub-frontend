@@ -2,7 +2,7 @@
 import useData from "./useData";
 
 export interface Genre {
-  id: number;
+  _id: string;
   name: string;
   slug: string;
   game_count: number;
